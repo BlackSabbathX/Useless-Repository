@@ -15,16 +15,16 @@
       <file leaf-file-name="UselessMainClass.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/UselessMainClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="19" column="34" lean-forward="true" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+            <state relative-caret-position="135">
+              <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
               <folding>
                 <element signature="method#Cuadrados#0;class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
                 <element signature="method#Colores#0;class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
-                <element signature="method#Espiral#0;class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
                 <element signature="method#Resetear#0;class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
                 <element signature="method#PaletaTierra#0;class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
                 <element signature="method#PaletaVivos#0;class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
                 <element signature="method#PaletaBases#0;class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
+                <element signature="class#Circulos#0;class#UselessMainClass#0" expanded="false" />
                 <element signature="method#Circulos#0;class#Circulos#0;class#UselessMainClass#0" expanded="false" />
                 <element signature="method#Colores#0;class#Circulos#0;class#UselessMainClass#0" expanded="false" />
                 <element signature="method#Espiral#0;class#Circulos#0;class#UselessMainClass#0" expanded="false" />
@@ -238,12 +238,12 @@
       <option name="presentableId" value="Default" />
       <updated>1510161244984</updated>
       <workItem from="1510161254791" duration="4328000" />
-      <workItem from="1510167720683" duration="6399000" />
+      <workItem from="1510167720683" duration="8536000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10727000" />
+    <option name="totallyTimeSpent" value="12864000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -297,11 +297,11 @@
           <folding>
             <element signature="method#Cuadrados#0;class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
             <element signature="method#Colores#0;class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
-            <element signature="method#Espiral#0;class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
             <element signature="method#Resetear#0;class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
             <element signature="method#PaletaTierra#0;class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
             <element signature="method#PaletaVivos#0;class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
             <element signature="method#PaletaBases#0;class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="class#Circulos#0;class#UselessMainClass#0" expanded="false" />
             <element signature="method#Circulos#0;class#Circulos#0;class#UselessMainClass#0" expanded="false" />
             <element signature="method#Colores#0;class#Circulos#0;class#UselessMainClass#0" expanded="false" />
             <element signature="method#Espiral#0;class#Circulos#0;class#UselessMainClass#0" expanded="false" />
@@ -323,16 +323,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/UselessMainClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="19" column="34" lean-forward="true" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+        <state relative-caret-position="135">
+          <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
           <folding>
             <element signature="method#Cuadrados#0;class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
             <element signature="method#Colores#0;class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
-            <element signature="method#Espiral#0;class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
             <element signature="method#Resetear#0;class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
             <element signature="method#PaletaTierra#0;class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
             <element signature="method#PaletaVivos#0;class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
             <element signature="method#PaletaBases#0;class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="class#Circulos#0;class#UselessMainClass#0" expanded="false" />
             <element signature="method#Circulos#0;class#Circulos#0;class#UselessMainClass#0" expanded="false" />
             <element signature="method#Colores#0;class#Circulos#0;class#UselessMainClass#0" expanded="false" />
             <element signature="method#Espiral#0;class#Circulos#0;class#UselessMainClass#0" expanded="false" />

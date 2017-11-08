@@ -8,25 +8,60 @@ public class UselessMainClass extends PApplet {
 
     Circulos circulos;
     Cuadrados cuadrados;
+    boolean sw, dibujar;
 
     public void settings() {
         size(650, 650);
     }
 
     public void setup() {
+        sw = true;
+        dibujar = true;
         frameRate(100);
         circulos = new Circulos(width / 2, height / 2);
         cuadrados = new Cuadrados(width / 2, height / 2);
-        background(200, 200, 200);
+        background(200);
+    }
+
+    public void keyPressed() {
+        switch (key) {
+            case 'z':
+            case 'Z':
+                background(200);
+                cuadrados = new Cuadrados(width / 2, height / 2);
+                sw = true;
+                break;
+            case 'x':
+            case 'X':
+                background(200);
+                circulos = new Circulos(width / 2, height / 2);
+                sw = false;
+                break;
+            case 'r':
+            case 'R':
+                background(200);
+                circulos = new Circulos(width / 2, height / 2);
+                cuadrados = new Cuadrados(width / 2, height / 2);
+                break;
+            case 'p':
+            case 'P':
+                dibujar = !dibujar;
+                break;
+        }
     }
 
     public void draw() {
-        pushMatrix();
-        cuadrados.Espiral();
-        popMatrix();/*
-        pushMatrix();
-        circulos.Espiral();
-        popMatrix();*/
+        if (dibujar) {
+            if (sw) {
+                pushMatrix();
+                cuadrados.Espiral();
+                popMatrix();
+            } else {
+                pushMatrix();
+                circulos.Espiral();
+                popMatrix();
+            }
+        }
     }
 
     private class Cuadrados {
@@ -37,7 +72,7 @@ public class UselessMainClass extends PApplet {
         public Cuadrados(float x, float y) {
             this.x = 0;
             this.y = 0;
-            this.ancho = 65;
+            this.ancho = 55;
             this.rad = 1;
             this.aleatorio = 0;
             Colores();
@@ -63,13 +98,14 @@ public class UselessMainClass extends PApplet {
         public void Espiral() {
             translate(width / 2, height / 2);
             rotate(this.rad);
-            strokeWeight((float) 0.4);
+            strokeWeight((float) 0.7);
+            stroke(0, 0, 0);
             fill(this.r, this.g, this.b);
             rect(this.x, this.y, this.ancho, this.ancho);
             this.rad++;
             this.x += 0.5;
             this.y += 0.5;
-            if (this.x > width - 250 && this.y > height - 250) {
+            if (this.x > width - 350 && this.y > height - 350) {
                 Resetear();
             }
         }
@@ -280,7 +316,7 @@ public class UselessMainClass extends PApplet {
             this.rad++;
             this.x += 0.5;
             this.y += 0.5;
-            if (this.x > width - 250 && this.y > height - 250) {
+            if (this.x > width - 300 && this.y > height - 300) {
                 Resetear();
             }
         }
