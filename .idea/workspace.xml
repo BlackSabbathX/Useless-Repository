@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="UselessProject:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="040d11d9-67f3-4d4b-956a-4e534743e461" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -15,8 +20,8 @@
       <file leaf-file-name="UselessMainClass.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/UselessMainClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="27" column="45" lean-forward="false" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
+            <state relative-caret-position="150">
+              <caret line="13" column="34" lean-forward="false" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#draw#0;class#UselessMainClass#0" expanded="false" />
@@ -108,6 +113,37 @@
             <path>
               <item name="Useless-Repository" type="b2602c69:ProjectViewProjectNode" />
               <item name="Useless-Repository" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Useless-Repository" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Useless-Repository" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Useless-Repository" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Useless-Repository" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
+              <item name="UselessProject_jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Useless-Repository" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Useless-Repository" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Useless-Repository" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Useless-Repository" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+              <item name="UselessProject" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Useless-Repository" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Useless-Repository" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -121,7 +157,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
@@ -250,12 +286,12 @@
       <option name="presentableId" value="Default" />
       <updated>1510161244984</updated>
       <workItem from="1510161254791" duration="4328000" />
-      <workItem from="1510167720683" duration="18492000" />
+      <workItem from="1510167720683" duration="19054000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22820000" />
+    <option name="totallyTimeSpent" value="23382000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -354,10 +390,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/UselessProject/UselessMainClass.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9164">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#24101#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/UselessMainClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="27" column="45" lean-forward="false" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
+        <state relative-caret-position="150">
+          <caret line="13" column="34" lean-forward="false" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#draw#0;class#UselessMainClass#0" expanded="false" />
@@ -389,10 +435,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>UselessProject:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>

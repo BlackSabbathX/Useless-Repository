@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="UselessProject:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/UselessProject_jar</output-path>
+    <root id="archive" name="UselessProject.jar">
+      <element id="module-output" name="UselessProject" />
+      <element id="extracted-dir" path="E:/Descargas/processing-3.3.6-windows64/processing-3.3.6/core/library/core.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
