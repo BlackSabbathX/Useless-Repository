@@ -11,29 +11,43 @@ public class UselessMainClass extends PApplet {
     Circulos circulos;
     Cuadrados cuadrados;
     Elipses elipses;
-    boolean dibujar, colorFullMain;
+    Lineas uno, dos, tres, cuatro;
+    boolean dibujar, colorFullMain, inv;
     int sw;
+    float rgb, tx, ty;
+    String str;
 
     public void settings() {
         size(650, 650);
     }
 
     public void setup() {
-        JOptionPane.showMessageDialog(null, "INSTRUCCIONES DE USO:\n" +
+        textAlign(CENTER);
+        textSize(15);
+        tx = width / 2;
+        ty = height / 2 - 140;
+        str = "INSTRUCCIONES DE USO:\n\n" +
                 "P - Pausar dibujado.\n" +
                 "Q - Cambiar paleta de colores.\n" +
                 "E - Exportar a png.\n" +
-                "R - Reiniciar imagen.\n" +
+                "R - Reiniciar imagen.\n\n" +
                 "Z - Dibujado con cuadrados.\n" +
                 "X - Dibujado con circulos.\n" +
-                "C - Dibujado con elipses.");
+                "C - Dibujado con elipses.\n\n" +
+                "M - Regresar al menu.";
         colorFullMain = false;
-        sw = 1;
+        sw = 4;
+        inv = true;
+        rgb = 250;
         dibujar = true;
-        frameRate(100);
+        frameRate(150);
         circulos = new Circulos(colorFullMain);
         cuadrados = new Cuadrados(colorFullMain);
         elipses = new Elipses(colorFullMain);
+        uno = new Lineas(1);
+        dos = new Lineas(2);
+        tres = new Lineas(3);
+        cuatro = new Lineas(4);
         background(200);
     }
 
@@ -80,6 +94,12 @@ public class UselessMainClass extends PApplet {
                 cuadrados = new Cuadrados(colorFullMain);
                 elipses = new Elipses(colorFullMain);
                 break;
+            case 'm':
+            case 'M':
+                circulos = new Circulos(colorFullMain);
+                cuadrados = new Cuadrados(colorFullMain);
+                elipses = new Elipses(colorFullMain);
+                sw = 4;
         }
     }
 
@@ -101,6 +121,22 @@ public class UselessMainClass extends PApplet {
                     circulos.Espiral();
                     popMatrix();
                     break;
+                case 4:
+                    background(rgb);
+                    uno.Dibujar(abs(rgb - 250));
+                    dos.Dibujar(abs(rgb - 250));
+                    tres.Dibujar(abs(rgb - 250));
+                    cuatro.Dibujar(abs(rgb - 250));
+                    fill(abs(rgb - 250));
+                    text(str, tx, ty);
+                    if (inv) {
+                        rgb--;
+                    } else {
+                        rgb++;
+                    }
+                    if (rgb == 0 || rgb == 250) {
+                        inv = !inv;
+                    }
             }
         }
     }
@@ -122,32 +158,40 @@ public class UselessMainClass extends PApplet {
         }
 
         public void Colores() {
-            int color = (int) random(0, 9);
+            int color;
             if (this.aleatorio == 0) {
+                color = (int) random(0, 30);
                 PaletaBases(color);
             } else {
                 if (colorFull) {
                     if (this.aleatorio % 2 == 1) {
-                        if ((int) random(0, 2) == 0) {
-                            PaletaVivos(color);
-                        } else {
+                        if ((int) random(0, 4) == 0) {
+                            color = (int) random(0, 22);
                             PaletaTierra(color);
+                        } else {
+                            color = (int) random(0, 37);
+                            PaletaVivos(color);
                         }
                     } else {
+                        color = (int) random(0, 30);
                         PaletaBases(color);
                     }
                 } else {
                     if (this.aleatorio % 2 == 1) {
-                        if ((int) random(0, 2) == 0) {
+                        if ((int) random(0, 4) == 0) {
+                            color = (int) random(0, 30);
                             PaletaBases(color);
                         } else {
+                            color = (int) random(0, 22);
                             PaletaTierra(color);
                         }
                     } else {
+                        color = (int) random(0, 30);
                         PaletaBases(color);
                     }
                 }
             }
+            System.out.println(color + "cuad");
         }
 
         public void Espiral() {
@@ -182,6 +226,7 @@ public class UselessMainClass extends PApplet {
         }
 
         public void PaletaTierra(int aleatorio) {
+            System.out.println("tierra");
             switch (aleatorio) {
                 case 0:
                     this.r = 255;
@@ -223,14 +268,85 @@ public class UselessMainClass extends PApplet {
                     this.g = 120;
                     this.b = 81;
                     break;
+                case 8:
+                    this.r = 205;
+                    this.g = 92;
+                    this.b = 205;
+                    break;
+                case 9:
+                    this.r = 220;
+                    this.g = 20;
+                    this.b = 60;
+                    break;
+                case 10:
+                    this.r = 178;
+                    this.g = 34;
+                    this.b = 34;
+                    break;
+                case 11:
+                    this.r = 139;
+                    this.g = 0;
+                    this.b = 0;
+                    break;
+                case 12:
+                    this.r = 219;
+                    this.g = 112;
+                    this.b = 147;
+                    break;
+                case 13:
+                    this.r = 255;
+                    this.g = 215;
+                    this.b = 0;
+                    break;
+                case 14:
+                    this.r = 189;
+                    this.g = 183;
+                    this.b = 107;
+                    break;
+                case 15:
+                    this.r = 240;
+                    this.g = 230;
+                    this.b = 140;
+                    break;
+                case 16:
+                    this.r = 72;
+                    this.g = 61;
+                    this.b = 139;
+                    break;
+                case 17:
+                    this.r = 222;
+                    this.g = 184;
+                    this.b = 135;
+                    break;
+                case 18:
+                    this.r = 184;
+                    this.g = 134;
+                    this.b = 11;
+                    break;
+                case 19:
+                    this.r = 139;
+                    this.g = 69;
+                    this.b = 19;
+                    break;
+                case 20:
+                    this.r = 128;
+                    this.g = 0;
+                    this.b = 0;
+                    break;
+                case 21:
+                    this.r = 160;
+                    this.g = 82;
+                    this.b = 45;
+                    break;
                 default:
-                    this.r = 75;
-                    this.g = 75;
-                    this.b = 75;
+                    this.r = 90;
+                    this.g = 90;
+                    this.b = 90;
             }
         }
 
         public void PaletaVivos(int aleatorio) {
+            System.out.println("vivos");
             switch (aleatorio) {
                 case 0:
                     this.r = 160;
@@ -272,6 +388,151 @@ public class UselessMainClass extends PApplet {
                     this.g = 255;
                     this.b = 189;
                     break;
+
+                case 8:
+                    this.r = 250;
+                    this.g = 128;
+                    this.b = 114;
+                    break;
+                case 9:
+                    this.r = 255;
+                    this.g = 0;
+                    this.b = 0;
+                    break;
+                case 10:
+                    this.r = 255;
+                    this.g = 105;
+                    this.b = 180;
+                    break;
+                case 11:
+                    this.r = 255;
+                    this.g = 20;
+                    this.b = 147;
+                    break;
+                case 12:
+                    this.r = 255;
+                    this.g = 127;
+                    this.b = 80;
+                    break;
+                case 13:
+                    this.r = 255;
+                    this.g = 99;
+                    this.b = 71;
+                    break;
+                case 14:
+                    this.r = 255;
+                    this.g = 69;
+                    this.b = 0;
+                    break;
+                case 15:
+                    this.r = 255;
+                    this.g = 140;
+                    this.b = 0;
+                    break;
+                case 16:
+                    this.r = 255;
+                    this.g = 255;
+                    this.b = 0;
+                    break;
+                case 17:
+                    this.r = 255;
+                    this.g = 0;
+                    this.b = 255;
+                    break;
+                case 18:
+                    this.r = 186;
+                    this.g = 85;
+                    this.b = 211;
+                    break;
+                case 19:
+                    this.r = 147;
+                    this.g = 112;
+                    this.b = 219;
+                    break;
+                case 20:
+                    this.r = 153;
+                    this.g = 102;
+                    this.b = 204;
+                    break;
+                case 21:
+                    this.r = 148;
+                    this.g = 0;
+                    this.b = 211;
+                    break;
+                case 22:
+                    this.r = 138;
+                    this.g = 43;
+                    this.b = 226;
+                    break;
+                case 23:
+                    this.r = 75;
+                    this.g = 0;
+                    this.b = 130;
+                    break;
+                case 24:
+                    this.r = 106;
+                    this.g = 90;
+                    this.b = 205;
+                    break;
+                case 25:
+                    this.r = 173;
+                    this.g = 255;
+                    this.b = 47;
+                    break;
+                case 26:
+                    this.r = 127;
+                    this.g = 255;
+                    this.b = 0;
+                    break;
+                case 27:
+                    this.r = 0;
+                    this.g = 255;
+                    this.b = 0;
+                    break;
+                case 28:
+                    this.r = 0;
+                    this.g = 250;
+                    this.b = 154;
+                    break;
+                case 29:
+                    this.r = 0;
+                    this.g = 250;
+                    this.b = 127;
+                    break;
+                case 30:
+                    this.r = 32;
+                    this.g = 178;
+                    this.b = 170;
+                    break;
+                case 31:
+                    this.r = 0;
+                    this.g = 255;
+                    this.b = 255;
+                    break;
+                case 32:
+                    this.r = 0;
+                    this.g = 0;
+                    this.b = 255;
+                    break;
+                case 33:
+                    this.r = 0;
+                    this.g = 0;
+                    this.b = 205;
+                    break;
+                case 34:
+                    this.r = 25;
+                    this.g = 25;
+                    this.b = 112;
+                    break;
+                case 35:
+                    this.r = 224;
+                    this.g = 164;
+                    this.b = 96;
+                    break;
+                case 36:
+                    this.r = 210;
+                    this.g = 105;
+                    this.b = 30;
                 default:
                     this.r = 0;
                     this.g = 200;
@@ -280,6 +541,7 @@ public class UselessMainClass extends PApplet {
         }
 
         public void PaletaBases(int aleatorio) {
+            System.out.println("bases");
             switch (aleatorio) {
                 case 0:
                     this.r = 250;
@@ -321,13 +583,121 @@ public class UselessMainClass extends PApplet {
                     this.g = 119;
                     this.b = 212;
                     break;
-                default:
-                    this.r = 205;
-                    this.g = 205;
+                case 8:
+                    this.r = 250;
+                    this.g = 128;
+                    this.b = 128;
+                    break;
+                case 9:
+                    this.r = 255;
+                    this.g = 160;
+                    this.b = 122;
+                    break;
+                case 10:
+                    this.r = 255;
+                    this.g = 192;
+                    this.b = 203;
+                    break;
+                case 11:
+                    this.r = 255;
+                    this.g = 160;
+                    this.b = 122;
+                    break;
+                case 12:
+                    this.r = 255;
+                    this.g = 255;
+                    this.b = 224;
+                    break;
+                case 13:
+                    this.r = 255;
+                    this.g = 250;
                     this.b = 205;
+                    break;
+                case 14:
+                    this.r = 255;
+                    this.g = 228;
+                    this.b = 181;
+                    break;
+                case 15:
+                    this.r = 255;
+                    this.g = 218;
+                    this.b = 185;
+                    break;
+                case 16:
+                    this.r = 240;
+                    this.g = 230;
+                    this.b = 140;
+                    break;
+                case 17:
+                    this.r = 230;
+                    this.g = 230;
+                    this.b = 250;
+                    break;
+                case 18:
+                    this.r = 216;
+                    this.g = 191;
+                    this.b = 216;
+                    break;
+                case 19:
+                    this.r = 221;
+                    this.g = 160;
+                    this.b = 221;
+                    break;
+                case 20:
+                    this.r = 123;
+                    this.g = 104;
+                    this.b = 238;
+                    break;
+                case 21:
+                    this.r = 152;
+                    this.g = 251;
+                    this.b = 152;
+                    break;
+                case 22:
+                    this.r = 224;
+                    this.g = 255;
+                    this.b = 255;
+                    break;
+                case 23:
+                    this.r = 176;
+                    this.g = 224;
+                    this.b = 230;
+                    break;
+                case 24:
+                    this.r = 255;
+                    this.g = 248;
+                    this.b = 220;
+                    break;
+                case 25:
+                    this.r = 255;
+                    this.g = 235;
+                    this.b = 205;
+                    break;
+                case 26:
+                    this.r = 255;
+                    this.g = 222;
+                    this.b = 173;
+                    break;
+                case 27:
+                    this.r = 240;
+                    this.g = 255;
+                    this.b = 240;
+                    break;
+                case 28:
+                    this.r = 255;
+                    this.g = 255;
+                    this.b = 240;
+                    break;
+                case 29:
+                    this.r = 255;
+                    this.g = 228;
+                    this.b = 225;
+                default:
+                    this.r = 250;
+                    this.g = 250;
+                    this.b = 250;
             }
         }
-
 
     }
 
@@ -348,32 +718,40 @@ public class UselessMainClass extends PApplet {
         }
 
         public void Colores() {
-            int color = (int) random(0, 9);
+            int color;
             if (this.aleatorio == 0) {
+                color = (int) random(0, 30);
                 PaletaBases(color);
             } else {
                 if (colorFull) {
                     if (this.aleatorio % 2 == 1) {
-                        if ((int) random(0, 2) == 0) {
-                            PaletaVivos(color);
-                        } else {
+                        if ((int) random(0, 4) == 0) {
+                            color = (int) random(0, 22);
                             PaletaTierra(color);
+                        } else {
+                            color = (int) random(0, 37);
+                            PaletaVivos(color);
                         }
                     } else {
+                        color = (int) random(0, 30);
                         PaletaBases(color);
                     }
                 } else {
                     if (this.aleatorio % 2 == 1) {
-                        if ((int) random(0, 2) == 0) {
+                        if ((int) random(0, 4) == 0) {
+                            color = (int) random(0, 30);
                             PaletaBases(color);
                         } else {
+                            color = (int) random(0, 22);
                             PaletaTierra(color);
                         }
                     } else {
+                        color = (int) random(0, 30);
                         PaletaBases(color);
                     }
                 }
             }
+            System.out.println(color + "circ");
         }
 
         public void Espiral() {
@@ -407,6 +785,7 @@ public class UselessMainClass extends PApplet {
         }
 
         public void PaletaTierra(int aleatorio) {
+            System.out.println("tierra");
             switch (aleatorio) {
                 case 0:
                     this.r = 255;
@@ -448,14 +827,85 @@ public class UselessMainClass extends PApplet {
                     this.g = 120;
                     this.b = 81;
                     break;
+                case 8:
+                    this.r = 205;
+                    this.g = 92;
+                    this.b = 205;
+                    break;
+                case 9:
+                    this.r = 220;
+                    this.g = 20;
+                    this.b = 60;
+                    break;
+                case 10:
+                    this.r = 178;
+                    this.g = 34;
+                    this.b = 34;
+                    break;
+                case 11:
+                    this.r = 139;
+                    this.g = 0;
+                    this.b = 0;
+                    break;
+                case 12:
+                    this.r = 219;
+                    this.g = 112;
+                    this.b = 147;
+                    break;
+                case 13:
+                    this.r = 255;
+                    this.g = 215;
+                    this.b = 0;
+                    break;
+                case 14:
+                    this.r = 189;
+                    this.g = 183;
+                    this.b = 107;
+                    break;
+                case 15:
+                    this.r = 240;
+                    this.g = 230;
+                    this.b = 140;
+                    break;
+                case 16:
+                    this.r = 72;
+                    this.g = 61;
+                    this.b = 139;
+                    break;
+                case 17:
+                    this.r = 222;
+                    this.g = 184;
+                    this.b = 135;
+                    break;
+                case 18:
+                    this.r = 184;
+                    this.g = 134;
+                    this.b = 11;
+                    break;
+                case 19:
+                    this.r = 139;
+                    this.g = 69;
+                    this.b = 19;
+                    break;
+                case 20:
+                    this.r = 128;
+                    this.g = 0;
+                    this.b = 0;
+                    break;
+                case 21:
+                    this.r = 160;
+                    this.g = 82;
+                    this.b = 45;
+                    break;
                 default:
-                    this.r = 75;
-                    this.g = 75;
-                    this.b = 75;
+                    this.r = 90;
+                    this.g = 90;
+                    this.b = 90;
             }
         }
 
         public void PaletaVivos(int aleatorio) {
+            System.out.println("vivos");
             switch (aleatorio) {
                 case 0:
                     this.r = 160;
@@ -497,6 +947,151 @@ public class UselessMainClass extends PApplet {
                     this.g = 255;
                     this.b = 189;
                     break;
+
+                case 8:
+                    this.r = 250;
+                    this.g = 128;
+                    this.b = 114;
+                    break;
+                case 9:
+                    this.r = 255;
+                    this.g = 0;
+                    this.b = 0;
+                    break;
+                case 10:
+                    this.r = 255;
+                    this.g = 105;
+                    this.b = 180;
+                    break;
+                case 11:
+                    this.r = 255;
+                    this.g = 20;
+                    this.b = 147;
+                    break;
+                case 12:
+                    this.r = 255;
+                    this.g = 127;
+                    this.b = 80;
+                    break;
+                case 13:
+                    this.r = 255;
+                    this.g = 99;
+                    this.b = 71;
+                    break;
+                case 14:
+                    this.r = 255;
+                    this.g = 69;
+                    this.b = 0;
+                    break;
+                case 15:
+                    this.r = 255;
+                    this.g = 140;
+                    this.b = 0;
+                    break;
+                case 16:
+                    this.r = 255;
+                    this.g = 255;
+                    this.b = 0;
+                    break;
+                case 17:
+                    this.r = 255;
+                    this.g = 0;
+                    this.b = 255;
+                    break;
+                case 18:
+                    this.r = 186;
+                    this.g = 85;
+                    this.b = 211;
+                    break;
+                case 19:
+                    this.r = 147;
+                    this.g = 112;
+                    this.b = 219;
+                    break;
+                case 20:
+                    this.r = 153;
+                    this.g = 102;
+                    this.b = 204;
+                    break;
+                case 21:
+                    this.r = 148;
+                    this.g = 0;
+                    this.b = 211;
+                    break;
+                case 22:
+                    this.r = 138;
+                    this.g = 43;
+                    this.b = 226;
+                    break;
+                case 23:
+                    this.r = 75;
+                    this.g = 0;
+                    this.b = 130;
+                    break;
+                case 24:
+                    this.r = 106;
+                    this.g = 90;
+                    this.b = 205;
+                    break;
+                case 25:
+                    this.r = 173;
+                    this.g = 255;
+                    this.b = 47;
+                    break;
+                case 26:
+                    this.r = 127;
+                    this.g = 255;
+                    this.b = 0;
+                    break;
+                case 27:
+                    this.r = 0;
+                    this.g = 255;
+                    this.b = 0;
+                    break;
+                case 28:
+                    this.r = 0;
+                    this.g = 250;
+                    this.b = 154;
+                    break;
+                case 29:
+                    this.r = 0;
+                    this.g = 250;
+                    this.b = 127;
+                    break;
+                case 30:
+                    this.r = 32;
+                    this.g = 178;
+                    this.b = 170;
+                    break;
+                case 31:
+                    this.r = 0;
+                    this.g = 255;
+                    this.b = 255;
+                    break;
+                case 32:
+                    this.r = 0;
+                    this.g = 0;
+                    this.b = 255;
+                    break;
+                case 33:
+                    this.r = 0;
+                    this.g = 0;
+                    this.b = 205;
+                    break;
+                case 34:
+                    this.r = 25;
+                    this.g = 25;
+                    this.b = 112;
+                    break;
+                case 35:
+                    this.r = 224;
+                    this.g = 164;
+                    this.b = 96;
+                    break;
+                case 36:
+                    this.r = 210;
+                    this.g = 105;
+                    this.b = 30;
                 default:
                     this.r = 0;
                     this.g = 200;
@@ -505,6 +1100,7 @@ public class UselessMainClass extends PApplet {
         }
 
         public void PaletaBases(int aleatorio) {
+            System.out.println("bases");
             switch (aleatorio) {
                 case 0:
                     this.r = 250;
@@ -546,10 +1142,119 @@ public class UselessMainClass extends PApplet {
                     this.g = 119;
                     this.b = 212;
                     break;
-                default:
-                    this.r = 205;
-                    this.g = 205;
+                case 8:
+                    this.r = 250;
+                    this.g = 128;
+                    this.b = 128;
+                    break;
+                case 9:
+                    this.r = 255;
+                    this.g = 160;
+                    this.b = 122;
+                    break;
+                case 10:
+                    this.r = 255;
+                    this.g = 192;
+                    this.b = 203;
+                    break;
+                case 11:
+                    this.r = 255;
+                    this.g = 160;
+                    this.b = 122;
+                    break;
+                case 12:
+                    this.r = 255;
+                    this.g = 255;
+                    this.b = 224;
+                    break;
+                case 13:
+                    this.r = 255;
+                    this.g = 250;
                     this.b = 205;
+                    break;
+                case 14:
+                    this.r = 255;
+                    this.g = 228;
+                    this.b = 181;
+                    break;
+                case 15:
+                    this.r = 255;
+                    this.g = 218;
+                    this.b = 185;
+                    break;
+                case 16:
+                    this.r = 240;
+                    this.g = 230;
+                    this.b = 140;
+                    break;
+                case 17:
+                    this.r = 230;
+                    this.g = 230;
+                    this.b = 250;
+                    break;
+                case 18:
+                    this.r = 216;
+                    this.g = 191;
+                    this.b = 216;
+                    break;
+                case 19:
+                    this.r = 221;
+                    this.g = 160;
+                    this.b = 221;
+                    break;
+                case 20:
+                    this.r = 123;
+                    this.g = 104;
+                    this.b = 238;
+                    break;
+                case 21:
+                    this.r = 152;
+                    this.g = 251;
+                    this.b = 152;
+                    break;
+                case 22:
+                    this.r = 224;
+                    this.g = 255;
+                    this.b = 255;
+                    break;
+                case 23:
+                    this.r = 176;
+                    this.g = 224;
+                    this.b = 230;
+                    break;
+                case 24:
+                    this.r = 255;
+                    this.g = 248;
+                    this.b = 220;
+                    break;
+                case 25:
+                    this.r = 255;
+                    this.g = 235;
+                    this.b = 205;
+                    break;
+                case 26:
+                    this.r = 255;
+                    this.g = 222;
+                    this.b = 173;
+                    break;
+                case 27:
+                    this.r = 240;
+                    this.g = 255;
+                    this.b = 240;
+                    break;
+                case 28:
+                    this.r = 255;
+                    this.g = 255;
+                    this.b = 240;
+                    break;
+                case 29:
+                    this.r = 255;
+                    this.g = 228;
+                    this.b = 225;
+                default:
+                    this.r = 250;
+                    this.g = 250;
+                    this.b = 250;
             }
         }
 
@@ -573,32 +1278,40 @@ public class UselessMainClass extends PApplet {
         }
 
         public void Colores() {
-            int color = (int) random(0, 9);
+            int color;
             if (this.aleatorio == 0) {
+                color = (int) random(0, 30);
                 PaletaBases(color);
             } else {
                 if (colorFull) {
                     if (this.aleatorio % 2 == 1) {
-                        if ((int) random(0, 2) == 0) {
-                            PaletaVivos(color);
-                        } else {
+                        if ((int) random(0, 4) == 0) {
+                            color = (int) random(0, 22);
                             PaletaTierra(color);
+                        } else {
+                            color = (int) random(0, 37);
+                            PaletaVivos(color);
                         }
                     } else {
+                        color = (int) random(0, 30);
                         PaletaBases(color);
                     }
                 } else {
                     if (this.aleatorio % 2 == 1) {
-                        if ((int) random(0, 2) == 0) {
+                        if ((int) random(0, 4) == 0) {
+                            color = (int) random(0, 30);
                             PaletaBases(color);
                         } else {
+                            color = (int) random(0, 22);
                             PaletaTierra(color);
                         }
                     } else {
+                        color = (int) random(0, 30);
                         PaletaBases(color);
                     }
                 }
             }
+            System.out.println(color + "elip");
         }
 
         public void Espiral() {
@@ -640,6 +1353,7 @@ public class UselessMainClass extends PApplet {
         }
 
         public void PaletaTierra(int aleatorio) {
+            System.out.println("tierra");
             switch (aleatorio) {
                 case 0:
                     this.r = 255;
@@ -681,14 +1395,85 @@ public class UselessMainClass extends PApplet {
                     this.g = 120;
                     this.b = 81;
                     break;
+                case 8:
+                    this.r = 205;
+                    this.g = 92;
+                    this.b = 205;
+                    break;
+                case 9:
+                    this.r = 220;
+                    this.g = 20;
+                    this.b = 60;
+                    break;
+                case 10:
+                    this.r = 178;
+                    this.g = 34;
+                    this.b = 34;
+                    break;
+                case 11:
+                    this.r = 139;
+                    this.g = 0;
+                    this.b = 0;
+                    break;
+                case 12:
+                    this.r = 219;
+                    this.g = 112;
+                    this.b = 147;
+                    break;
+                case 13:
+                    this.r = 255;
+                    this.g = 215;
+                    this.b = 0;
+                    break;
+                case 14:
+                    this.r = 189;
+                    this.g = 183;
+                    this.b = 107;
+                    break;
+                case 15:
+                    this.r = 240;
+                    this.g = 230;
+                    this.b = 140;
+                    break;
+                case 16:
+                    this.r = 72;
+                    this.g = 61;
+                    this.b = 139;
+                    break;
+                case 17:
+                    this.r = 222;
+                    this.g = 184;
+                    this.b = 135;
+                    break;
+                case 18:
+                    this.r = 184;
+                    this.g = 134;
+                    this.b = 11;
+                    break;
+                case 19:
+                    this.r = 139;
+                    this.g = 69;
+                    this.b = 19;
+                    break;
+                case 20:
+                    this.r = 128;
+                    this.g = 0;
+                    this.b = 0;
+                    break;
+                case 21:
+                    this.r = 160;
+                    this.g = 82;
+                    this.b = 45;
+                    break;
                 default:
-                    this.r = 75;
-                    this.g = 75;
-                    this.b = 75;
+                    this.r = 90;
+                    this.g = 90;
+                    this.b = 90;
             }
         }
 
         public void PaletaVivos(int aleatorio) {
+            System.out.println("vivos");
             switch (aleatorio) {
                 case 0:
                     this.r = 160;
@@ -730,6 +1515,151 @@ public class UselessMainClass extends PApplet {
                     this.g = 255;
                     this.b = 189;
                     break;
+
+                case 8:
+                    this.r = 250;
+                    this.g = 128;
+                    this.b = 114;
+                    break;
+                case 9:
+                    this.r = 255;
+                    this.g = 0;
+                    this.b = 0;
+                    break;
+                case 10:
+                    this.r = 255;
+                    this.g = 105;
+                    this.b = 180;
+                    break;
+                case 11:
+                    this.r = 255;
+                    this.g = 20;
+                    this.b = 147;
+                    break;
+                case 12:
+                    this.r = 255;
+                    this.g = 127;
+                    this.b = 80;
+                    break;
+                case 13:
+                    this.r = 255;
+                    this.g = 99;
+                    this.b = 71;
+                    break;
+                case 14:
+                    this.r = 255;
+                    this.g = 69;
+                    this.b = 0;
+                    break;
+                case 15:
+                    this.r = 255;
+                    this.g = 140;
+                    this.b = 0;
+                    break;
+                case 16:
+                    this.r = 255;
+                    this.g = 255;
+                    this.b = 0;
+                    break;
+                case 17:
+                    this.r = 255;
+                    this.g = 0;
+                    this.b = 255;
+                    break;
+                case 18:
+                    this.r = 186;
+                    this.g = 85;
+                    this.b = 211;
+                    break;
+                case 19:
+                    this.r = 147;
+                    this.g = 112;
+                    this.b = 219;
+                    break;
+                case 20:
+                    this.r = 153;
+                    this.g = 102;
+                    this.b = 204;
+                    break;
+                case 21:
+                    this.r = 148;
+                    this.g = 0;
+                    this.b = 211;
+                    break;
+                case 22:
+                    this.r = 138;
+                    this.g = 43;
+                    this.b = 226;
+                    break;
+                case 23:
+                    this.r = 75;
+                    this.g = 0;
+                    this.b = 130;
+                    break;
+                case 24:
+                    this.r = 106;
+                    this.g = 90;
+                    this.b = 205;
+                    break;
+                case 25:
+                    this.r = 173;
+                    this.g = 255;
+                    this.b = 47;
+                    break;
+                case 26:
+                    this.r = 127;
+                    this.g = 255;
+                    this.b = 0;
+                    break;
+                case 27:
+                    this.r = 0;
+                    this.g = 255;
+                    this.b = 0;
+                    break;
+                case 28:
+                    this.r = 0;
+                    this.g = 250;
+                    this.b = 154;
+                    break;
+                case 29:
+                    this.r = 0;
+                    this.g = 250;
+                    this.b = 127;
+                    break;
+                case 30:
+                    this.r = 32;
+                    this.g = 178;
+                    this.b = 170;
+                    break;
+                case 31:
+                    this.r = 0;
+                    this.g = 255;
+                    this.b = 255;
+                    break;
+                case 32:
+                    this.r = 0;
+                    this.g = 0;
+                    this.b = 255;
+                    break;
+                case 33:
+                    this.r = 0;
+                    this.g = 0;
+                    this.b = 205;
+                    break;
+                case 34:
+                    this.r = 25;
+                    this.g = 25;
+                    this.b = 112;
+                    break;
+                case 35:
+                    this.r = 224;
+                    this.g = 164;
+                    this.b = 96;
+                    break;
+                case 36:
+                    this.r = 210;
+                    this.g = 105;
+                    this.b = 30;
                 default:
                     this.r = 0;
                     this.g = 200;
@@ -738,6 +1668,7 @@ public class UselessMainClass extends PApplet {
         }
 
         public void PaletaBases(int aleatorio) {
+            System.out.println("bases");
             switch (aleatorio) {
                 case 0:
                     this.r = 250;
@@ -779,14 +1710,220 @@ public class UselessMainClass extends PApplet {
                     this.g = 119;
                     this.b = 212;
                     break;
-                default:
-                    this.r = 205;
-                    this.g = 205;
+                case 8:
+                    this.r = 250;
+                    this.g = 128;
+                    this.b = 128;
+                    break;
+                case 9:
+                    this.r = 255;
+                    this.g = 160;
+                    this.b = 122;
+                    break;
+                case 10:
+                    this.r = 255;
+                    this.g = 192;
+                    this.b = 203;
+                    break;
+                case 11:
+                    this.r = 255;
+                    this.g = 160;
+                    this.b = 122;
+                    break;
+                case 12:
+                    this.r = 255;
+                    this.g = 255;
+                    this.b = 224;
+                    break;
+                case 13:
+                    this.r = 255;
+                    this.g = 250;
                     this.b = 205;
+                    break;
+                case 14:
+                    this.r = 255;
+                    this.g = 228;
+                    this.b = 181;
+                    break;
+                case 15:
+                    this.r = 255;
+                    this.g = 218;
+                    this.b = 185;
+                    break;
+                case 16:
+                    this.r = 240;
+                    this.g = 230;
+                    this.b = 140;
+                    break;
+                case 17:
+                    this.r = 230;
+                    this.g = 230;
+                    this.b = 250;
+                    break;
+                case 18:
+                    this.r = 216;
+                    this.g = 191;
+                    this.b = 216;
+                    break;
+                case 19:
+                    this.r = 221;
+                    this.g = 160;
+                    this.b = 221;
+                    break;
+                case 20:
+                    this.r = 123;
+                    this.g = 104;
+                    this.b = 238;
+                    break;
+                case 21:
+                    this.r = 152;
+                    this.g = 251;
+                    this.b = 152;
+                    break;
+                case 22:
+                    this.r = 224;
+                    this.g = 255;
+                    this.b = 255;
+                    break;
+                case 23:
+                    this.r = 176;
+                    this.g = 224;
+                    this.b = 230;
+                    break;
+                case 24:
+                    this.r = 255;
+                    this.g = 248;
+                    this.b = 220;
+                    break;
+                case 25:
+                    this.r = 255;
+                    this.g = 235;
+                    this.b = 205;
+                    break;
+                case 26:
+                    this.r = 255;
+                    this.g = 222;
+                    this.b = 173;
+                    break;
+                case 27:
+                    this.r = 240;
+                    this.g = 255;
+                    this.b = 240;
+                    break;
+                case 28:
+                    this.r = 255;
+                    this.g = 255;
+                    this.b = 240;
+                    break;
+                case 29:
+                    this.r = 255;
+                    this.g = 228;
+                    this.b = 225;
+                default:
+                    this.r = 250;
+                    this.g = 250;
+                    this.b = 250;
             }
         }
 
+    }
 
+    private class Lineas {
+
+        float x1, y1, x2, y2;
+        int esq;
+        boolean inv;
+
+        public Lineas(int esq) {
+            this.esq = esq;
+            this.inv = true;
+            switch (this.esq) {
+                case 1:
+                    this.x1 = 0;
+                    this.y1 = 0;
+                    this.x2 = width;
+                    this.y2 = 1;
+                    break;
+                case 2:
+                    this.x1 = width;
+                    this.y1 = 0;
+                    this.x2 = width - 1;
+                    this.y2 = width;
+                    break;
+                case 3:
+                    this.x1 = width;
+                    this.y1 = width;
+                    this.x2 = 0;
+                    this.y2 = width - 1;
+                    break;
+                case 4:
+                    this.x1 = 0;
+                    this.y1 = width;
+                    this.x2 = 1;
+                    this.y2 = 0;
+                    break;
+            }
+        }
+
+        public void Dibujar(float rgb) {
+            stroke(rgb);
+            strokeWeight(1);
+            line(this.x1, this.y1, this.x2, this.y2);
+            Avanzar();
+        }
+
+        private void Avanzar() {
+            switch (this.esq) {
+                case 1:
+                    if (inv) {
+                        this.x1++;
+                        this.y2++;
+                    } else {
+                        this.x1--;
+                        this.y2--;
+                    }
+                    if (this.x1 == width - 1 || (!this.inv && this.x1 == 0)) {
+                        inv = !inv;
+                    }
+                    break;
+                case 2:
+                    if (inv) {
+                        this.y1++;
+                        this.x2--;
+                    } else {
+                        this.y1--;
+                        this.x2++;
+                    }
+                    if (this.y1 == width - 1 || (!this.inv && this.y1 == 0)) {
+                        inv = !inv;
+                    }
+                    break;
+                case 3:
+                    if (inv) {
+                        this.x1--;
+                        this.y2--;
+                    } else {
+                        this.x1++;
+                        this.y2++;
+                    }
+                    if (this.x1 == 1 || (!this.inv && this.x1 == width)) {
+                        inv = !inv;
+                    }
+                    break;
+                case 4:
+                    if (inv) {
+                        this.y1--;
+                        this.x2++;
+                    } else {
+                        this.y1++;
+                        this.x2--;
+                    }
+                    if (this.y1 == 1 || (!this.inv && this.y1 == width)) {
+                        inv = !inv;
+                    }
+                    break;
+            }
+        }
     }
 
 }

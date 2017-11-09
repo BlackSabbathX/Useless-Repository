@@ -20,22 +20,30 @@
       <file leaf-file-name="UselessMainClass.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/UselessMainClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="13" column="34" lean-forward="false" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+            <state relative-caret-position="210">
+              <caret line="16" column="22" lean-forward="false" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#setup#0;class#UselessMainClass#0" expanded="false" />
+                <element signature="method#keyPressed#0;class#UselessMainClass#0" expanded="false" />
                 <element signature="method#draw#0;class#UselessMainClass#0" expanded="false" />
+                <element signature="class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
                 <element signature="method#Cuadrados#0;class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
+                <element signature="method#Colores#0;class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
                 <element signature="method#Espiral#0;class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
                 <element signature="method#Resetear#0;class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
                 <element signature="method#PaletaTierra#0;class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
                 <element signature="method#PaletaVivos#0;class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
                 <element signature="method#PaletaBases#0;class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
+                <element signature="class#Circulos#0;class#UselessMainClass#0" expanded="false" />
+                <element signature="method#Circulos#0;class#Circulos#0;class#UselessMainClass#0" expanded="false" />
+                <element signature="method#Colores#0;class#Circulos#0;class#UselessMainClass#0" expanded="false" />
                 <element signature="method#Espiral#0;class#Circulos#0;class#UselessMainClass#0" expanded="false" />
                 <element signature="method#Resetear#0;class#Circulos#0;class#UselessMainClass#0" expanded="false" />
                 <element signature="method#PaletaTierra#0;class#Circulos#0;class#UselessMainClass#0" expanded="false" />
                 <element signature="method#PaletaVivos#0;class#Circulos#0;class#UselessMainClass#0" expanded="false" />
                 <element signature="method#PaletaBases#0;class#Circulos#0;class#UselessMainClass#0" expanded="false" />
+                <element signature="class#Elipses#0;class#UselessMainClass#0" expanded="false" />
                 <element signature="method#Elipses#0;class#Elipses#0;class#UselessMainClass#0" expanded="false" />
                 <element signature="method#Colores#0;class#Elipses#0;class#UselessMainClass#0" expanded="false" />
                 <element signature="method#Espiral#0;class#Elipses#0;class#UselessMainClass#0" expanded="false" />
@@ -43,6 +51,9 @@
                 <element signature="method#PaletaTierra#0;class#Elipses#0;class#UselessMainClass#0" expanded="false" />
                 <element signature="method#PaletaVivos#0;class#Elipses#0;class#UselessMainClass#0" expanded="false" />
                 <element signature="method#PaletaBases#0;class#Elipses#0;class#UselessMainClass#0" expanded="false" />
+                <element signature="class#Lineas#0;class#UselessMainClass#0" expanded="false" />
+                <element signature="method#Lineas#0;class#Lineas#0;class#UselessMainClass#0" expanded="false" />
+                <element signature="method#Avanzar#0;class#Lineas#0;class#UselessMainClass#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -56,6 +67,11 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>this.aleatorio+</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -79,7 +95,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="676" />
     <option name="width" value="697" />
     <option name="height" value="735" />
@@ -101,8 +117,8 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -287,15 +303,16 @@
       <updated>1510161244984</updated>
       <workItem from="1510161254791" duration="4328000" />
       <workItem from="1510167720683" duration="19054000" />
+      <workItem from="1510196757421" duration="1099000" />
+      <workItem from="1510237945186" duration="14686000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23382000" />
+    <option name="totallyTimeSpent" value="39167000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -307,7 +324,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14447807" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30862328" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -335,7 +352,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="4" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -346,18 +363,26 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#setup#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#keyPressed#0;class#UselessMainClass#0" expanded="false" />
             <element signature="method#draw#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
             <element signature="method#Cuadrados#0;class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#Colores#0;class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
             <element signature="method#Espiral#0;class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
             <element signature="method#Resetear#0;class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
             <element signature="method#PaletaTierra#0;class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
             <element signature="method#PaletaVivos#0;class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
             <element signature="method#PaletaBases#0;class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="class#Circulos#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#Circulos#0;class#Circulos#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#Colores#0;class#Circulos#0;class#UselessMainClass#0" expanded="false" />
             <element signature="method#Espiral#0;class#Circulos#0;class#UselessMainClass#0" expanded="false" />
             <element signature="method#Resetear#0;class#Circulos#0;class#UselessMainClass#0" expanded="false" />
             <element signature="method#PaletaTierra#0;class#Circulos#0;class#UselessMainClass#0" expanded="false" />
             <element signature="method#PaletaVivos#0;class#Circulos#0;class#UselessMainClass#0" expanded="false" />
             <element signature="method#PaletaBases#0;class#Circulos#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="class#Elipses#0;class#UselessMainClass#0" expanded="false" />
             <element signature="method#Elipses#0;class#Elipses#0;class#UselessMainClass#0" expanded="false" />
             <element signature="method#Colores#0;class#Elipses#0;class#UselessMainClass#0" expanded="false" />
             <element signature="method#Espiral#0;class#Elipses#0;class#UselessMainClass#0" expanded="false" />
@@ -365,6 +390,89 @@
             <element signature="method#PaletaTierra#0;class#Elipses#0;class#UselessMainClass#0" expanded="false" />
             <element signature="method#PaletaVivos#0;class#Elipses#0;class#UselessMainClass#0" expanded="false" />
             <element signature="method#PaletaBases#0;class#Elipses#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="class#Lineas#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#Lineas#0;class#Lineas#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#Avanzar#0;class#Lineas#0;class#UselessMainClass#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UselessMainClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#setup#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#keyPressed#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#draw#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#Cuadrados#0;class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#Colores#0;class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#Espiral#0;class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#Resetear#0;class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#PaletaTierra#0;class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#PaletaVivos#0;class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#PaletaBases#0;class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="class#Circulos#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#Circulos#0;class#Circulos#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#Colores#0;class#Circulos#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#Espiral#0;class#Circulos#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#Resetear#0;class#Circulos#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#PaletaTierra#0;class#Circulos#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#PaletaVivos#0;class#Circulos#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#PaletaBases#0;class#Circulos#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="class#Elipses#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#Elipses#0;class#Elipses#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#Colores#0;class#Elipses#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#Espiral#0;class#Elipses#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#Resetear#0;class#Elipses#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#PaletaTierra#0;class#Elipses#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#PaletaVivos#0;class#Elipses#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#PaletaBases#0;class#Elipses#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="class#Lineas#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#Lineas#0;class#Lineas#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#Avanzar#0;class#Lineas#0;class#UselessMainClass#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UselessMainClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#setup#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#keyPressed#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#draw#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#Cuadrados#0;class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#Colores#0;class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#Espiral#0;class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#Resetear#0;class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#PaletaTierra#0;class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#PaletaVivos#0;class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#PaletaBases#0;class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="class#Circulos#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#Circulos#0;class#Circulos#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#Colores#0;class#Circulos#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#Espiral#0;class#Circulos#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#Resetear#0;class#Circulos#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#PaletaTierra#0;class#Circulos#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#PaletaVivos#0;class#Circulos#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#PaletaBases#0;class#Circulos#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="class#Elipses#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#Elipses#0;class#Elipses#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#Colores#0;class#Elipses#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#Espiral#0;class#Elipses#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#Resetear#0;class#Elipses#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#PaletaTierra#0;class#Elipses#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#PaletaVivos#0;class#Elipses#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#PaletaBases#0;class#Elipses#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="class#Lineas#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#Lineas#0;class#Lineas#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#Avanzar#0;class#Lineas#0;class#UselessMainClass#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -373,51 +481,44 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-85139">
           <caret line="307" column="16" lean-forward="false" selection-start-line="307" selection-start-column="16" selection-end-line="307" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Instrucciones.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Instrucciones.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="28" lean-forward="true" selection-start-line="0" selection-start-column="28" selection-end-line="0" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Instrucciones.form" />
+    <entry file="file://$PROJECT_DIR$/src/Instrucciones.java" />
     <entry file="file://$PROJECT_DIR$/out/production/UselessProject/UselessMainClass.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-9164">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#24101#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/UselessMainClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="13" column="34" lean-forward="false" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+        <state relative-caret-position="210">
+          <caret line="16" column="22" lean-forward="false" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#setup#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#keyPressed#0;class#UselessMainClass#0" expanded="false" />
             <element signature="method#draw#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
             <element signature="method#Cuadrados#0;class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#Colores#0;class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
             <element signature="method#Espiral#0;class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
             <element signature="method#Resetear#0;class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
             <element signature="method#PaletaTierra#0;class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
             <element signature="method#PaletaVivos#0;class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
             <element signature="method#PaletaBases#0;class#Cuadrados#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="class#Circulos#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#Circulos#0;class#Circulos#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#Colores#0;class#Circulos#0;class#UselessMainClass#0" expanded="false" />
             <element signature="method#Espiral#0;class#Circulos#0;class#UselessMainClass#0" expanded="false" />
             <element signature="method#Resetear#0;class#Circulos#0;class#UselessMainClass#0" expanded="false" />
             <element signature="method#PaletaTierra#0;class#Circulos#0;class#UselessMainClass#0" expanded="false" />
             <element signature="method#PaletaVivos#0;class#Circulos#0;class#UselessMainClass#0" expanded="false" />
             <element signature="method#PaletaBases#0;class#Circulos#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="class#Elipses#0;class#UselessMainClass#0" expanded="false" />
             <element signature="method#Elipses#0;class#Elipses#0;class#UselessMainClass#0" expanded="false" />
             <element signature="method#Colores#0;class#Elipses#0;class#UselessMainClass#0" expanded="false" />
             <element signature="method#Espiral#0;class#Elipses#0;class#UselessMainClass#0" expanded="false" />
@@ -425,6 +526,9 @@
             <element signature="method#PaletaTierra#0;class#Elipses#0;class#UselessMainClass#0" expanded="false" />
             <element signature="method#PaletaVivos#0;class#Elipses#0;class#UselessMainClass#0" expanded="false" />
             <element signature="method#PaletaBases#0;class#Elipses#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="class#Lineas#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#Lineas#0;class#Lineas#0;class#UselessMainClass#0" expanded="false" />
+            <element signature="method#Avanzar#0;class#Lineas#0;class#UselessMainClass#0" expanded="false" />
           </folding>
         </state>
       </provider>
