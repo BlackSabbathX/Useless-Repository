@@ -26,7 +26,7 @@ public class UselessMainClass extends PApplet {
         textSize(15);
         tx = width / 2;
         ty = height / 2 - 140;
-        str = "INSTRUCCIONES DE USO:\n\n" +
+        str = "INSTRUCCIONES DE USO\n\n" +
                 "P - Pausar dibujado.\n" +
                 "Q - Cambiar paleta de colores.\n" +
                 "E - Exportar a png.\n" +
