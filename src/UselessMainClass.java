@@ -1,7 +1,5 @@
 import processing.core.PApplet;
 
-import javax.swing.*;
-
 public class UselessMainClass extends PApplet {
 
     public static void main(String[] args) {
@@ -12,9 +10,11 @@ public class UselessMainClass extends PApplet {
     Cuadrados cuadrados;
     Elipses elipses;
     Lineas uno, dos, tres, cuatro;
+    Lineas u, d, t, c;
+    Particulas particulas;
     boolean dibujar, colorFullMain, inv;
-    int sw;
-    float rgb, tx, ty;
+    int sw, aux;
+    float rgb, tx, ty, negativo;
     String str;
 
     public void settings() {
@@ -22,6 +22,7 @@ public class UselessMainClass extends PApplet {
     }
 
     public void setup() {
+        aux = 0;
         textAlign(CENTER);
         textSize(15);
         tx = width / 2;
@@ -44,10 +45,15 @@ public class UselessMainClass extends PApplet {
         circulos = new Circulos(colorFullMain);
         cuadrados = new Cuadrados(colorFullMain);
         elipses = new Elipses(colorFullMain);
+        particulas = new Particulas();
         uno = new Lineas(1);
         dos = new Lineas(2);
         tres = new Lineas(3);
         cuatro = new Lineas(4);
+        u = new Lineas(1);
+        d = new Lineas(2);
+        t = new Lineas(3);
+        c = new Lineas(4);
         background(200);
     }
 
@@ -123,12 +129,12 @@ public class UselessMainClass extends PApplet {
                     break;
                 case 4:
                     background(rgb);
-                    uno.Dibujar(abs(rgb - 250));
-                    dos.Dibujar(abs(rgb - 250));
-                    tres.Dibujar(abs(rgb - 250));
-                    cuatro.Dibujar(abs(rgb - 250));
-                    fill(abs(rgb - 250));
-                    text(str, tx, ty);
+                    negativo = abs(rgb - 250);
+                    uno.Dibujar(negativo);
+                    dos.Dibujar(negativo);
+                    tres.Dibujar(negativo);
+                    cuatro.Dibujar(negativo);
+                    fill(negativo);
                     if (inv) {
                         rgb--;
                     } else {
@@ -137,6 +143,8 @@ public class UselessMainClass extends PApplet {
                     if (rgb == 0 || rgb == 250) {
                         inv = !inv;
                     }
+                    text(str, tx, ty);
+                    particulas.Dibujar(negativo);
             }
         }
     }
@@ -1842,24 +1850,24 @@ public class UselessMainClass extends PApplet {
                     this.x1 = 0;
                     this.y1 = 0;
                     this.x2 = width;
-                    this.y2 = 1;
+                    this.y2 = 0;
                     break;
                 case 2:
                     this.x1 = width;
                     this.y1 = 0;
-                    this.x2 = width - 1;
+                    this.x2 = width;
                     this.y2 = width;
                     break;
                 case 3:
                     this.x1 = width;
                     this.y1 = width;
                     this.x2 = 0;
-                    this.y2 = width - 1;
+                    this.y2 = width;
                     break;
                 case 4:
                     this.x1 = 0;
                     this.y1 = width;
-                    this.x2 = 1;
+                    this.x2 = 0;
                     this.y2 = 0;
                     break;
             }
@@ -1882,7 +1890,7 @@ public class UselessMainClass extends PApplet {
                         this.x1--;
                         this.y2--;
                     }
-                    if (this.x1 == width - 1 || (!this.inv && this.x1 == 0)) {
+                    if (this.x1 == width || (!this.inv && this.x1 == 0)) {
                         inv = !inv;
                     }
                     break;
@@ -1894,7 +1902,7 @@ public class UselessMainClass extends PApplet {
                         this.y1--;
                         this.x2++;
                     }
-                    if (this.y1 == width - 1 || (!this.inv && this.y1 == 0)) {
+                    if (this.y1 == width || (!this.inv && this.y1 == 0)) {
                         inv = !inv;
                     }
                     break;
@@ -1906,7 +1914,7 @@ public class UselessMainClass extends PApplet {
                         this.x1++;
                         this.y2++;
                     }
-                    if (this.x1 == 1 || (!this.inv && this.x1 == width)) {
+                    if (this.x1 == 0 || (!this.inv && this.x1 == width)) {
                         inv = !inv;
                     }
                     break;
@@ -1918,12 +1926,89 @@ public class UselessMainClass extends PApplet {
                         this.y1++;
                         this.x2--;
                     }
-                    if (this.y1 == 1 || (!this.inv && this.y1 == width)) {
+                    if (this.y1 == 0 || (!this.inv && this.y1 == width)) {
                         inv = !inv;
                     }
                     break;
             }
         }
+    }
+
+    private class Particulas {
+
+        float[] pivoteX, pivoteY, x, y, ancho;
+        float max;
+        int n;
+
+        public Particulas() {
+            this.n = 100;
+            this.max = 1;
+            this.x = new float[n];
+            this.y = new float[n];
+            this.pivoteX = new float[n];
+            this.pivoteY = new float[n];
+            this.ancho = new float[n];
+            for (int i = 0; i < this.n; i++) {
+                this.x[i] = random(0, width);
+                this.y[i] = random(0, width);
+                switch ((int) random(1, 5)) {
+                    case 1:
+                        this.pivoteX[i] = random(0, 1);
+                        this.pivoteY[i] = random(0, 1);
+                        break;
+                    case 2:
+                        this.pivoteX[i] = -random(0, 1);
+                        this.pivoteY[i] = -random(0, 1);
+                        break;
+                    case 3:
+                        this.pivoteX[i] = -random(0, 1);
+                        this.pivoteY[i] = random(0, 1);
+                        break;
+                    case 4:
+                        this.pivoteX[i] = random(0, 1);
+                        this.pivoteY[i] = -random(0, 1);
+                        break;
+                }
+                this.ancho[i] = random(1, 4);
+            }
+        }
+
+        public void Dibujar(float rgb) {
+            if (keyPressed) {
+                if (this.max < 10) {
+                    this.max += 0.5;
+                }
+            } else {
+                if (this.max > 1) {
+                    this.max -= 0.02;
+                }
+            }
+            stroke(rgb);
+            for (int i = 0; i < this.n; i++) {
+                strokeWeight(this.ancho[i]);
+                point(x[i], y[i]);
+                if (this.pivoteX[i] == 1) {
+                    x[i] += random(0, this.pivoteX[i]);
+                    y[i] += random(0, this.pivoteY[i]);
+                } else {
+                    x[i] += random(this.pivoteX[i], 0);
+                    y[i] += random(this.pivoteY[i], 0);
+                }
+                if (x[i] < 0) {
+                    this.pivoteX[i] = random(this.max - 1, this.max);
+                }
+                if (y[i] < 0) {
+                    this.pivoteY[i] = random(this.max - 1, this.max);
+                }
+                if (x[i] > width) {
+                    this.pivoteX[i] = -random(this.max - 1, this.max);
+                }
+                if (y[i] > width) {
+                    this.pivoteY[i] = -random(this.max - 1, this.max);
+                }
+            }
+        }
+
     }
 
 }
